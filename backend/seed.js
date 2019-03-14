@@ -35,9 +35,10 @@ for (var i = 0; i < 10; i++) {
 
   for (var j = 0; j < 5; j++) {
     var date = new Date()
-    var start_date = date.setDate(date.getDate() + randomInt(5) + 1)
-    var assigned_date = date.setDate(date.getDate() + randomInt(5) + 1)
-    var end_date = date.setDate(date.getDate() + randomInt(5) + 1)
+     
+    var start_date = date.setDate(date.getDate() + randomInt(20) + 1)
+    var end_date = date.setDate(date.getDate() + randomInt(20) + 1)
+    var assigned_date = new Date().setDate(date.getDate() + randomInt(20) + 1)
 
     var project = new Project({
       startDate: start_date,

@@ -54,7 +54,7 @@ export class AppService {
             "id": project["projectId"]["_id"],
             "start_date": this.toDateString(startDate),
             "end_date": this.toDateString(endDate),
-            "status": this.status(project["projectId"]["isActive"]),
+            "status": this.status(project["isActive"]),
             "credits": project["projectId"]["credits"],
             "assigned_date": assignedDate,
             "time_to_start": this.difOrText(daysTillAssigned)
@@ -83,6 +83,7 @@ export class AppService {
   }
 
   status(active) {
+    console.log(active)
     return active ? "Active" : "Inactive"
   }
 
