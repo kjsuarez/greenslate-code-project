@@ -1,8 +1,23 @@
 
 
-<mat-grid-list cols="6" rowHeight="6:1" class="minutiae">
-  <mat-grid-tile *ngFor="let header of headers" class="keyword-tile">
-    {{header}}
+<mat-grid-list cols="6" rowHeight="4:1" class="minutiae">
+  <mat-grid-tile class="id-tile">
+    project ID
+  </mat-grid-tile>
+  <mat-grid-tile class="start-date-tile">
+    Start Date
+  </mat-grid-tile>
+  <mat-grid-tile class="start-time-tile">
+    Time to Start
+  </mat-grid-tile>
+  <mat-grid-tile class="end-date-tile">
+    End Date
+  </mat-grid-tile>
+  <mat-grid-tile class="credits-tile">
+    Credits
+  </mat-grid-tile>
+  <mat-grid-tile class="status-tile">
+    Status
   </mat-grid-tile>
 </mat-grid-list>
 

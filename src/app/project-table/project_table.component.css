@@ -1,0 +1,29 @@
+.id-tile {
+  min-width: 14em;
+}
+
+.start-date-tile {
+  margin-left: 8em;
+}
+
+.credits-tile {
+  max-width: 4em;
+  margin-left: 6em;
+}
+
+.status-tile {
+  max-width: 5em;
+  margin-left: 3em;
+}
+
+.start-time-tile {
+  margin-left: 8em;
+}
+
+.end-date-tile {
+  margin-left: 7em;
+}
+
+.mat-grid-list {
+  font-size: 120%;
+}
