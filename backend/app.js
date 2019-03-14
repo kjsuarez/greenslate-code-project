@@ -7,7 +7,11 @@ const mongoose = require('mongoose');
 //mongoose.connect('mongodb+srv://kjsuarez:' + process.env.MONGO_ATLAS_PW + '@anothertextadventure-ddkor.mongodb.net/text-adventure-db?retryWrites=true')
 
 // local server via $ mongod
-mongoose.connect(process.env.DATABASE_URL)
+// mongoose.connect(process.env.DATABASE_URL)
+// or
+// "DATABASE_URL": "mongodb://localhost:27017/code-test-db"
+
+mongoose.connect('mongodb+srv://kjsuarez:' + process.env.MONGO_ATLAS_PW + '@anothertextadventure-ddkor.mongodb.net/greenslate-test?retryWrites=true')
 .then(() => {
     console.log("Connected to database!");
 })

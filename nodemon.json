@@ -1,5 +1,6 @@
 {
   "env": {
-    "DATABASE_URL": "mongodb://localhost:27017/code-test-db"
+    "MONGO_ATLAS_PW": "p1rLsOoxWeuf9Fwv",
+    "DATABASE_URL": "mongodb+srv://kjsuarez:p1rLsOoxWeuf9Fwv@anothertextadventure-ddkor.mongodb.net/greenslate-test?retryWrites=true"
   }
 }
