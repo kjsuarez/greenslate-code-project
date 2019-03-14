@@ -3,7 +3,7 @@ var router = express.Router();
 
 var User = require('../models/user');
 var Project = require('../models/project');
-var UserProject = require('../models/userproject');
+var UserProject = require('../models/user-project');
 
 router.get('/', function(req, res, next) {
 

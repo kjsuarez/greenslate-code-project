@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 var User = require('./models/user');
 var Project = require('./models/project');
-var UserProject = require('./models/userproject');
+var UserProject = require('./models/user-project');
 
 mongoose.connect("mongodb://localhost:27017/code-test-db")
 .then(() => {
@@ -34,7 +34,7 @@ for (var i = 0; i < 10; i++) {
   });
 
   for (var j = 0; j < 5; j++) {
-    var date = new Date()     
+    var date = new Date()
     var start_date = date.setDate(date.getDate() + randomInt(20) + 1)
     var end_date = date.setDate(date.getDate() + randomInt(20) + 1)
     var assigned_date = new Date().setDate(date.getDate() + randomInt(20) + 1)
