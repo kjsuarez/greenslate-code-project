@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 // or
 // "DATABASE_URL": "mongodb://localhost:27017/code-test-db"
 
-mongoose.connect('mongodb+srv://kjsuarez:' + process.env.MONGO_ATLAS_PW + '@anothertextadventure-ddkor.mongodb.net/greenslate-test?retryWrites=true')
+mongoose.connect(process.env.DATABASE_URL)
 .then(() => {
     console.log("Connected to database!");
 })
