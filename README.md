@@ -1,27 +1,21 @@
 # DbCodeChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+A test project for Greenslate
 
-## Development server
+## Development setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for an Angular dev server located at `http://localhost:4200/`. 
+Run `npm start` for a Node Server.
 
-## Code scaffolding
+## setting up DB
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The project runs on MongoDB, you can find Mongo setup info here- `https://www.mongodb.com/download-center/community`.
+Currently the Node server is set to load the development db from an environment variable.
 
-## Build
+## Seeding DB
+The project specified a preseeded database, so I wrote a script that seeds a local Mongo db.
+You can run it from `npm run seed`, or just go to `http://localhost:3000/seed`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Live Server
+If setting up Mongo is too much trouble, I went ahead and set up a live version here: `https://kjsuarez.github.io/greenslate-code-project/`.
+The Node backend can be found here: `https://greenslate-code-challenge.herokuapp.com/`.
