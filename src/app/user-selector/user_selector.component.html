@@ -1,11 +1,17 @@
-<!-- <mat-form-field class="duration-input">
-  <input
-  matInput
-  placeholder="duration"
-  type="number"
-  [(ngModel)]="duration"
-  (keyup)="setDuration()"
-  (click)="setDuration()">
-</mat-form-field> -->
 
-hey look at me
+
+<form class=""
+#userSelectForm
+ngNativeValidate>
+
+  <mat-form-field>
+    <mat-select placeholder="user name"
+    [(ngModel)]="selectedUser"
+    name="selectedUser">
+      <mat-option *ngFor="let user of users" [value]="user.id"
+      (click)="sendUser(selectedUser)">
+        {{user.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

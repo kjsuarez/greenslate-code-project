@@ -9,10 +9,21 @@ import { AppService } from '../app.service';
 })
 export class ProjectTableComponent {
 
-  startDate;
-  dateString;
+  headers = ["project ID", "Start Date", "Time to Start", "End Date", "Credits", "Status"]
+  projects = [];
 
-  constructor(private appService: AppService){}
+  constructor(private appService: AppService){
+    appService.selectedUser$.subscribe(
+      user => {
+        this.appService.getSelectedProjects(user)
+        .subscribe(
+          res => {
+            this.projects = [].concat(res)
+          }
+        )
+      }
+    );
+  }
 
   // addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
   //   this.startDate = event.value

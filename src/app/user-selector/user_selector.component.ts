@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
@@ -7,10 +7,23 @@ import { AppService } from '../app.service';
   styleUrls: ['./user_selector.component.css']
 })
 export class UserSelectorComponent {
+  users = [ {id: null, name: '--'} ];
+  selectedUser;
 
   constructor(private appService: AppService){}
 
-  // setDuration() {
-  //     this.appService.setDuration()
-  // }
+  ngOnInit() {
+    this.appService.getUsers()
+    .subscribe(
+      res => {
+        this.users = this.users.concat(res)
+      }
+    )
+  }
+
+  sendUser(user) {
+    if(user) {
+      this.appService.setSelectedUser(user)  
+    }
+  }
 }

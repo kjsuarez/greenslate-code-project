@@ -1,11 +1,30 @@
-<!-- <mat-form-field>
-  <input
-  matInput
-  [matDatepicker]="picker"
-  placeholder="Start Date"
-  (dateInput)="addEvent('input', $event)"
-  (dateChange)="addEvent('change', $event)"
-  [(ngModel)]="dateInput">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field> -->
+
+
+<mat-grid-list cols="6" rowHeight="6:1" class="minutiae">
+  <mat-grid-tile *ngFor="let header of headers" class="keyword-tile">
+    {{header}}
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="projects-div" *ngIf="this.projects.length > 0">
+  <mat-grid-list cols="6" rowHeight="6:1" class="minutiae" *ngFor="let project of projects">
+    <mat-grid-tile class="id-tile">
+      {{project["id"]}}
+    </mat-grid-tile>
+    <mat-grid-tile class="start-date-tile">
+      {{project["start_date"]}}
+    </mat-grid-tile>
+    <mat-grid-tile class="start-time-tile">
+      {{project["time_to_start"]}}
+    </mat-grid-tile>
+    <mat-grid-tile class="end-date-tile">
+      {{project["end_date"]}}
+    </mat-grid-tile>
+    <mat-grid-tile class="credits-tile">
+      {{project["credits"]}}
+    </mat-grid-tile>
+    <mat-grid-tile class="status-tile">
+      {{project["status"]}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
