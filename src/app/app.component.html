@@ -1,3 +1,12 @@
-<user-selector></user-selector>
+<mat-spinner
+*ngIf="server_status == 'unknown'"
+class="waker"
+[diameter]="250">
+</mat-spinner>
 
-<project-table></project-table>
+<h1 *ngIf="server_status == 'error'"> Something's wrong with the server 😬</h1>
+
+<div class="" *ngIf="server_status == 'awake'">
+  <user-selector></user-selector>
+  <project-table></project-table>
+</div>

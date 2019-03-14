@@ -87,4 +87,22 @@ export class AppService {
     return active ? "Active" : "Inactive"
   }
 
+  wakeServer() {
+    return this.httpClient.get(BACKEND_URL)
+    .pipe(
+      map((response: any) => {
+        return "awake";
+      }),
+      catchError((response: any) => {
+        console.log("error touching backend:")
+        console.log(response)
+        if(response.status >= 400 && response.status < 500) {
+          return of("awake")
+        } else {
+          return of('error')
+        }
+      })
+    )
+  }
+
 }
