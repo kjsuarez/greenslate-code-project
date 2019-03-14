@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var jwt = require('jsonwebtoken');
-var async = require('async');
 
 var User = require('../models/user');
 var Project = require('../models/project');

@@ -17,6 +17,7 @@ mongoose.connect(process.env.DATABASE_URL)
 
 const rootRoute = require('./routes/smoketest');
 const userRoutes = require('./routes/user');
+const seederRoutes = require('./routes/seed');
 
 const app = express();
 
@@ -38,5 +39,6 @@ app.use((req, res, next) => {
 
 app.use('/', rootRoute);
 app.use('/users', userRoutes);
+app.use('/seed', seederRoutes)
 
 module.exports = app;
